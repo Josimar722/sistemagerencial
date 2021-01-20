@@ -1,0 +1,254 @@
+create database salaoDeBeleza;
+
+use salaoDeBeleza;
+
+create table agendamentos (
+	codAgendamento		 INT(11) 	 AUTO_INCREMENT PRIMARY KEY,
+	codigoCliente		 INT(11)	 ,
+	nomeCliente		 VARCHAR(20) 	 ,
+	codigoServico		 INT(11)	 ,
+	nomeServico		 VARCHAR(35)     ,
+	dataAgendamento		 DATE		 ,
+	horaAgendamento		 TIME		 ,
+	obs			 TEXT		 ,
+	documento		 VARCHAR (100)
+);
+
+INSERT INTO agendamentos (	nomeCliente, nomeServico, dataAgendamento, horaAgendamento, obs ) 
+VALUES ( 'Rafael', 'Corte Masculino', '2018-11-08', '9:00', '' );
+
+INSERT INTO agendamentos (	nomeCliente, nomeServico, dataAgendamento, horaAgendamento, obs ) 
+VALUES ( 'Jorge', 'Corte Masculino', '2018-11-10', '10:00', 'Cliente pode se atrasar.' );
+
+INSERT INTO agendamentos (	nomeCliente, nomeServico, dataAgendamento, horaAgendamento, obs ) 
+VALUES ( 'Sandro', 'Corte Masculino', '2018-11-11', '12:00', 'Cliente chega sempre adiantado.' );
+
+INSERT INTO agendamentos (	nomeCliente, nomeServico, dataAgendamento, horaAgendamento, obs ) 
+VALUES ( 'Jose', 'Corte Masculino', '2018-11-12', '11:00', 'Cliente pontual.' );
+
+
+
+CREATE TABLE clientes (
+	codigo			  INT(11)	AUTO_INCREMENT PRIMARY KEY,
+	cpf			  VARCHAR(11)	 ,
+	nome			  VARCHAR(50)	 ,
+	dataNascimento	  	  DATE		 ,
+	sexo			  CHAR(1) 	 ,
+	endereco		  VARCHAR(50) 	 ,
+	numero			  INT(6)	 ,
+	bairro			  VARCHAR(30)	 ,
+	cep			  VARCHAR(8)	 ,
+	email			  VARCHAR(50)	 ,
+	telefone		  VARCHAR(10)	 ,
+	celular			  VARCHAR(11)	 ,
+	cadastrado	  	  DATE		 ,
+	obs			  TEXT		 ,	
+	documento		  VARCHAR(100)	 
+);
+
+
+INSERT INTO clientes 
+	(	cpf,	nome,     dataNascimento,	
+		sexo,    endereco,    numero, 
+		bairro,  cep,  email,   telefone, cadastrado,
+		celular,     obs)
+	VALUES (
+		'32585958485',
+		'Rafael', '19900510','M', 'Rua jorge souza', '78', 
+		'vila matilde','03545000', 'jorge@hotmail.com', '1145458585', '20180501',
+		'11999998888', 'Cliente novo') ;
+
+INSERT INTO clientes 
+	(	cpf,	nome,     dataNascimento,	
+		sexo,    endereco,    numero, 
+		bairro,  cep,  email,   telefone, cadastrado,
+		celular,     obs)
+	VALUES (
+		'47484558485',
+		'Alex', '19800505','M', 'Rua souza santos', '8', 
+		'vila matilde','03545100', 'alex@hotmail.com', '1178788585', '20180602',
+		'11778578888', 'Cliente antigo') ;
+
+INSERT INTO clientes 
+	(	cpf,	nome,     dataNascimento,	
+		sexo,    endereco,    numero, 
+		bairro,  cep,  email,   telefone, cadastrado,
+		celular,     obs)
+	VALUES (
+		'32585921254',
+		'Felipe', '19900502','M', 'Rua jorge souza', '78', 
+		'vila matilde','03545200', 'jorge@hotmail.com', '1145458585', '20180503',
+		'11999332588', 'Cliente novo') ;
+
+INSERT INTO clientes 
+	(	cpf,	nome,     dataNascimento,	
+		sexo,    endereco,    numero, 
+		bairro,  cep,  email,   telefone, cadastrado,
+		celular,     obs)
+	VALUES (
+		'32585958485',
+		'Ivo', '19900408','M', 'Rua sandro souza', '7', 
+		'vila matilde','02245000', 'ivo@hotmail.com', '1145458585', '20180502', 
+		'11997787688', 'Sem anotacoes') ;
+
+INSERT INTO clientes 
+	(	cpf,	nome,     dataNascimento,	
+		sexo,    endereco,    numero, 
+		bairro,  cep,  email,   telefone, cadastrado,
+		celular,     obs)
+	VALUES (
+		'32585958485',
+		'Sandra', '19900501','F', 'Rua waldemar carlos', '7878', 
+		'vila dalila','03532000', 'sandra@hotmail.com', '1145458585', '20180507',
+		'11999789858', 'Sem Observacoes') ;
+
+
+create table produtos(
+
+Id 		int(11) auto_increment primary key,
+nome 		varchar (40)	,
+Fabricante 	varchar (40)	,
+Unidade 	float (7,2)	,
+Preco 		float (7,2)	,
+Custo 		float (7,2)	,
+quantidade  	int (11)	,
+estoque 	int (11)	,
+Localizacao 	varchar (80)	,
+Codigo 		varchar (100)	,
+Descricao 	text		,
+documento		  VARCHAR(100)	 
+);
+
+INSERT INTO produtos (	nome,fabricante,Unidade,preco,	Custo,quantidade, estoque, Localizacao,Codigo,Descricao ) 
+VALUES ( 'Gel', 'Newfix','1.1','5.00', '2.50', 50, 20, 'Prateleira A','45874582',' Excelente produto.');
+
+INSERT INTO produtos (	nome,fabricante,Unidade,preco,	Custo,quantidade, estoque, Localizacao,Codigo,Descricao ) 
+VALUES ( 'Shampoo', 'Newfix','100','18.00', '9.50', 20, 2, 'Prateleira B','45877748',' Excelente produto.');
+
+INSERT INTO produtos (	nome,fabricante,Unidade,preco,	Custo,quantidade, estoque, Localizacao,Codigo,Descricao ) 
+VALUES ( 'Creme de barba', 'Newfix','50','7.00', '3.50', 10, 2, 'Prateleira C','98594582',' Produto não vende muito.');
+
+INSERT INTO produtos (	nome,fabricante,Unidade,preco,	Custo,quantidade, estoque, Localizacao,Codigo,Descricao ) 
+VALUES ( 'Tintura', 'Newfix','100','20.00', '8.50', 10, 1, 'Prateleira D','45855982',' Produto vende poucas unidades.');
+
+
+
+CREATE TABLE servicos(
+    codigo			 		  INT(11) AUTO_INCREMENT PRIMARY KEY,
+	NomeServico               VARCHAR(20),
+	Pago                      VARCHAR(3),
+	AtendidoPor			      VARCHAR(40),
+	NomeCliente               VARCHAR(20),
+	Tipo                      VARCHAR(20),
+	Total                     CHAR(2),
+	ConcluiuServico           DATE,
+	ValorServico              Float(7,2),
+	Nomefuncionario           VARCHAR(20),
+	DatadaVisita              DATE,
+    foto                      VARCHAR(100),	
+	Obs                       TEXT
+);
+
+
+Insert Into servicos (NomeServico,Pago,AtendidoPor,NomeCliente,Tipo,Total,ConcluiuServico,ValorServico,NomeFuncionario,DatadaVisita,obs) 
+Values('Cabelo','S','Joao','Jose','Corte','1','2018-10-06','20.00','Joao','2018-10-06','Pagou');
+
+
+Insert Into servicos (NomeServico,Pago,AtendidoPor,NomeCliente,Tipo,Total,ConcluiuServico,ValorServico,NomeFuncionario,DatadaVisita,obs) 
+Values('Unha','N','Beatriz','Maria','Manicure','1','2018-09-08','30.00','Beatriz','2018-08-10','Não Pagou');
+
+
+
+Insert Into servicos (NomeServico,Pago,AtendidoPor,NomeCliente,Tipo,Total,ConcluiuServico,ValorServico,NomeFuncionario,DatadaVisita,obs) 
+Values('Barba','S','Jorge','Marcos','Barba','1','2018-11-20','05.00','Jorge','2018-11-20','Pagou');
+
+
+
+Insert Into servicos (NomeServico,Pago,AtendidoPor,NomeCliente,Tipo,Total,ConcluiuServico,ValorServico,NomeFuncionario,DatadaVisita,obs) 
+Values('Corte Feminino','N','Paula','Suellen','Corte','1','2018-08-15','30.00','Paula','2018-08-15','Não Pagou');
+
+
+CREATE TABLE `movimento` (
+  
+`id` int(11) NOT NULL AUTO_INCREMENT,
+  
+`tipo_movimento` enum('R','D') NOT NULL,
+  
+`data` date DEFAULT NULL,
+  
+`categoria` enum('Conta','Servicos','Produtos')NOT NULL,
+  
+`tipo` varchar(30) NOT NULL,
+  
+`quantidade` int(11) NOT NULL,
+  
+`forma_pagamento` enum('Dinheiro','Cartao') NOT NULL,
+
+`tipo_cartao` enum('','Debito','Credito') DEFAULT NULL,
+  
+`valor_receita` double(12,2) DEFAULT NULL,
+  
+`valor_despesa` double(12,2) DEFAULT NULL,
+
+`valor_dinheiro` double(12,2) DEFAULT NULL,
+
+`valor_cartao` double(12,2) DEFAULT NULL,
+
+`valor_debito` double(12,2) DEFAULT NULL,
+
+`valor_credito` double(12,2) DEFAULT NULL,
+
+`documento` varchar(50) DEFAULT NULL,
+  
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+INSERT INTO `salaodebeleza`.`movimento` (`tipo_movimento`, `data`, `categoria`, `tipo`, `quantidade`, `forma_pagamento`, `valor_receita`, `valor_dinheiro`) VALUES ('R', '2018-11-11', 'Produtos', 'Gel', '1', 'Dinheiro', '10.00', '10.00');
+INSERT INTO `salaodebeleza`.`movimento` (`tipo_movimento`, `data`, `categoria`, `tipo`, `quantidade`, `forma_pagamento`, `tipo_cartao`, `valor_receita`, `valor_cartao`, `valor_debito`) VALUES ('R', '2018-11-11', 'Servicos', 'Corte', '5', 'Cartao', 'Debito', '100.00', '100.00', '100.00');
+INSERT INTO `salaodebeleza`.`movimento` (`tipo_movimento`, `data`, `categoria`, `tipo`, `quantidade`, `forma_pagamento`, `tipo_cartao`, `valor_receita`, `valor_cartao`, `valor_credito`) VALUES ('R', '2018-10-11', 'Produtos', 'Shampoo', '10', 'Cartao', 'Credito', '200.00', '200.00', '200.00');
+INSERT INTO `salaodebeleza`.`movimento` (`tipo_movimento`, `data`, `categoria`, `tipo`, `quantidade`, `forma_pagamento`, `valor_receita`, `valor_dinheiro`) VALUES ('R', '2018-09-15', 'Servicos', 'Penteado', '3', 'Dinheiro', '30.00', '30.00');
+
+
+
+CREATE TABLE funcionarios(
+codigo                    INT(11) AUTO_INCREMENT PRIMARY KEY,
+nome                      VARCHAR(20),
+sobrenome                 VARCHAR(20),
+dataNascimento            DATE,
+sexo                      VARCHAR(9),
+rg                        CHAR(12),
+cpf                       CHAR(14),
+estadoCivil               VARCHAR(8),
+endereco                  VARCHAR(25),
+bairro                    VARCHAR(25),
+cidade                    VARCHAR(25),
+estado                    VARCHAR(10),
+cep                       CHAR(9),
+telefone                  CHAR(13),
+celular                   CHAR(14),
+email                     VARCHAR(100),
+dataAdmissao              DATE,
+instrucao                 enum('G1','G2','G3','MT','SUP'),
+cargo                     VARCHAR(35),
+documento                 VARCHAR(100),
+obs                       TEXT
+);
+
+INSERT INTO funcionarios(nome,sobrenome,dataNascimento,sexo,rg,cpf,estadoCivil,endereco,bairro,cidade,estado,cep,telefone,celular,email,dataAdmissao,instrucao,cargo,documento,obs)                                                                                    
+VALUES('Eduardo','Martins',19880702,'M','62.000.003-X','213.546.879-01','Casado','Av.Joao da Silva','Patriarca','Sao Paulo','Sao Paulo','78099-899','(11)2937-1022','(11)99273-0212','eduardomartins@gmail.com','2018-09-07','G1','cabelereiro','GOOGLE.doc','bom funcionario');
+
+INSERT INTO funcionarios(nome,sobrenome,dataNascimento,sexo,rg,cpf,estadoCivil,endereco,bairro,cidade,estado,cep,telefone,celular,email,dataAdmissao,instrucao,cargo,documento,obs)                                                                                    
+VALUES('Felipe','Brito',19840601,'M','51.011.012-A','324.657.988-02','Casado','Av.Jose de Souza','Patriarca','Sao Paulo','Sao Paulo','67089-798','(11)2848-1132','(11)98162-0103','felipebrito@gmail.com','2018-08-05','G2','cabelereiro','GOOGLE.doc','');
+
+INSERT INTO funcionarios(nome,sobrenome,dataNascimento,sexo,rg,cpf,estadoCivil,endereco,bairro,cidade,estado,cep,telefone,celular,email,dataAdmissao,instrucao,cargo,documento,obs)                                                                                    
+VALUES('Alice','Correa',19911012,'F','73.120.015-B','312.645.978-10','Casado','Rua Paulo de Souza','Arthur Alvim','Sao Paulo','Sao Paulo','99178-987','(11)2973-0122','(11)92937-2021','alicecorrea@gmail.com','2017-02-05','G1','cabelereiro','GOOGLE.doc','excelente funcionaria');
+
+INSERT INTO funcionarios(nome,sobrenome,dataNascimento,sexo,rg,cpf,estadoCivil,endereco,bairro,cidade,estado,cep,telefone,celular,email,dataAdmissao,instrucao,cargo,documento,obs)                                                                                    
+VALUES('Paula','Marques',19870501,'F','10.325.476-X','423.756.889-21','Casado','Rua Alvares','Carrao','Sao Paulo','Sao Paulo','89198-988','(11)2948-2133','(11)99384-1323','paulamarques@gmail.com','2016-12-01','G2','cabelereiro','GOOGLE.doc','');
+
+INSERT INTO funcionarios(nome,sobrenome,dataNascimento,sexo,rg,cpf,estadoCivil,endereco,bairro,cidade,estado,cep,telefone,celular,email,dataAdmissao,instrucao,cargo,documento,obs)                                                                                    
+VALUES('Paula','Marques',19870501,'F','10.325.476-X','423.756.889-21','Casado','Rua Alvares','Carrao','Sao Paulo','Sao Paulo','89198-988','(11)2948-2133','(11)99384-1323','paulamarques@gmail.com','2016-12-01','G2','cabelereiro','GOOGLE.doc','');
+
+
+
+
