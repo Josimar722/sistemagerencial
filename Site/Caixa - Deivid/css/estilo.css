@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.body {
+    font-family: "Century Gothic";
+    font-size: 16px;
+    color: #999;
+}
+#geral_home {
+    width: 940px;
+    height: auto;
+    margin: auto;
+}
+.topo_home {
+    width: 930px;
+    height: 270px;
+    margin: auto;
+    position: relative;
+    border: solid 5px #00b3ff;
+	background: black;
+}
+.topo_home label{
+	font-family:"Times New Roman";
+	font-size:60px;
+	margin-left: 70px;
+	color:#00b3ff;
+}
+.topo_home p{
+	font-family:"Times New Roman";
+	font-size:60px;
+	margin-left: 70px;
+	color:#00b3ff;
+}
+.menu {
+    width: 940px;
+    height: 40px;
+    margin: auto;
+    font-size: 20px;
+    background: black;
+}
+.menu ul li {
+    position: relative;
+    display: inline;
+    padding: 0 0 0 40px;
+    top: 10px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #00b3ff;
+}
+.menu ul li a:hover {
+    text-decoration: underline;
+    color: #4FEF10;
+}
+.menu ul li a.active {
+    color: #ffffff;
+    text-decoration: none;
+}
+.caixa_login {
+    width: 450px;
+    height: 360px;
+    float: left;
+    margin: 100px 240px 100px 240px;
+    line-height: 20px;
+}
+.caixa_login h1{
+    text-align: center;
+    color: red;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+label {
+    margin-left: 100px;
+}
+.input_email {
+    border-bottom-width: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 20px;
+    margin-left: 5px;
+}
+.input_senha {
+    border-bottom-width: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 20px;
+    margin-left: 4px;
+    margin-bottom: 30px;
+}
+.bt_acesso {
+    text-align: center;
+    width: 116px;
+    height: 26px;
+    margin-top: 20px;
+    margin-left: 165px;
+}

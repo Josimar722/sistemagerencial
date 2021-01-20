@@ -1,0 +1,91 @@
+@charset "utf-8";
+#topo_home {
+    width: 930px;
+    height: 270px;
+    margin: auto;
+    position: relative;
+    border: solid 5px #00b3ff;
+	background: black;
+}
+#topo_home label{
+	font-family:"Times New Roman";
+	font-size:60px;
+	margin-top: 5px;
+	margin-left:70px;
+	color:#00b3ff;
+}
+#topo_home p{
+	font-family:"Times New Roman";
+	font-size:60px;
+	margin-left:70px;
+	color:#00b3ff;
+}
+.relatorio_mes {
+    width: 450px;
+    height: 200px;
+    float: left;
+    margin-bottom: 30px;
+    margin: 20px 0 0 240px;
+    text-align: justify;
+    line-height: 20px;
+}
+.bts_fieldset {
+    float: right;
+    width: 180px;
+    height: 30px;
+    color: #00b3ff;
+    background: black;
+    text-align: center;
+    font-size: 25px;
+}
+.botoes {
+    float: left;
+}
+.botoes button{
+    width: 160px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+    background: black;
+    cursor: pointer;
+}
+.botoes button a {
+    text-decoration: none;
+    color: #00b3ff;
+    font-size: 18px;
+    font-family: "Century Gothic";
+}
+.botoes button a:hover {
+    text-decoration: underline;
+    color: #4FEF10;
+}
+.listagem {
+    width: 940px;
+    height: auto;
+    margin-top:50px;
+    clear: both;
+    font-family: "Century Gothic";
+    font-size: 16px;
+    color: #999999;
+}
+#tabela_titulo {
+    text-align: center;
+    font-family: "Century Gothic";
+    font-size: 16px;
+    border: solid 1px black;
+    color: black;
+}
+.tr {
+    text-align: center;
+    font-family: "Century Gothic";
+    background: black;
+    color: #00b3ff;
+}
+.td {
+    text-align: center;
+    font-family: "Century Gothic";
+    width: 100px;
+    color: black;
+}

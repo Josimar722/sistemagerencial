@@ -1,0 +1,51 @@
+.botoes {
+    float: left;
+}
+.botoes button{
+    width: 160px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+    background: black;
+    cursor: pointer;
+}
+.botoes button a {
+    text-decoration: none;
+    color: #00b3ff;
+    font-size: 18px;
+    font-family: "Century Gothic";
+}
+.botoes button a:hover {
+    text-decoration: underline;
+    color: #4FEF10;
+}
+.listagem {
+    width: 940px;
+    height: auto;
+    margin-top:50px;
+    clear: both;
+    font-family: "Century Gothic";
+    font-size: 16px;
+    color: #999999;
+}
+#tabela_titulo {
+    text-align: center;
+    font-family: "Century Gothic";
+    font-size: 12px;
+    border: solid 1px black;
+    color: black;
+}
+.tr {
+    text-align: center;
+    font-family: "Century Gothic";
+    background: black;
+    color: #00b3ff;
+}
+.td {
+    text-align: center;
+    font-family: "Century Gothic";
+    width: 100px;
+    color: black;
+}
